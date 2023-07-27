@@ -1,8 +1,12 @@
 
 import React from 'react';
 import './Navbar.css';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const router = useNavigate();
+
   return (
     <div id='Nmain'>
         <div className="Navfi">
@@ -20,7 +24,7 @@ const Navbar = () => {
             </div>
             <i class="fa-regular fa-heart"></i>
             <i class="fa-solid fa-bag-shopping"></i>
-            <i class="fa-regular fa-circle-user"></i>
+            <i class="fa-regular fa-circle-user" onClick={ ()=> router('/register')}></i>
         </div>
       
     </div>
