@@ -1,13 +1,16 @@
 
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './Singleproduct.css'
 
 const Singleproduct = () => {
 
+    const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+    const [currentUserEmail, setCurrentUserEmail] = useState("");
     const [products, setProducts] = useState([]);
     const [singleproduct, setSingleProduct] = useState([]);
     const { id } = useParams();
+    const router = useNavigate();
 
 
     useEffect(() => {
@@ -23,6 +26,34 @@ const Singleproduct = () => {
             setSingleProduct(result)
         }
     }, [id, products])
+
+    useEffect (() => {
+        var user = JSON.parse(localStorage.getItem("Current-user"));
+        console.log(user, "usr")
+        if (user) {
+            setIsUserLoggedIn(true);
+            setCurrentUserEmail(user.email)
+        }
+    }, [])
+
+    
+    function addCart() {
+        if (isUserLoggedIn) {
+            const users = JSON.parse(localStorage.getItem("Users"));
+            
+            for (var i = 0; i < users.length; i++) {
+                if(users[i].email == currentUserEmail) {
+                    users[i].cart.push(singleproduct);
+                    localStorage.setItem("Users", JSON.stringify(users));
+                    break;
+                }
+            }
+            alert("Product added successfully to cart!")
+            router('/multi-product')
+        } else {
+            alert("You cant add product before login...")
+        }
+    }
 
     return (
         <div id='Smain'>
@@ -69,7 +100,7 @@ const Singleproduct = () => {
                         </div>
                     </div>
                     <div className='Bag'>
-                        <button>ADD TO BAG</button>
+                        <button onClick={addCart}>ADD TO BAG</button>
                     </div>
                 </div>
             </div>

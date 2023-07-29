@@ -26,6 +26,7 @@ const Navbar = () => {
             <i class="fa-solid fa-bag-shopping"></i>
             <i class="fa-regular fa-circle-user" onClick={ ()=> router('/register')}></i>
         </div>
+        
       
     </div>
   )

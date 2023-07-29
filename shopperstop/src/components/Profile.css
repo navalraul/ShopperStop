@@ -1,0 +1,133 @@
+
+#Pmain {
+    width: 100%;
+    height: 650px;
+    /* border: 1px solid red; */
+}
+.Pbot {
+    width: 100%;
+    height: 600px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(231, 226, 226);
+}
+.Edit-left {
+    width: 25%;
+    height: 500px;
+    /* border: 1px solid yellow; */
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.Edit-le-top {
+    width: 92%;
+    height: 150px;
+    /* border: 1px solid red; */
+}
+.Edit-le-top-fi {
+    width: 100%;
+    height: 110px;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255,51,95);
+}
+.Edit-img {
+    width: 18%;
+    height: 30px;
+    /* border: 1px solid green; */
+    border-radius: 50px;
+    margin-top: 10px;
+    background-color: white;
+}
+.Edit-img >img {
+    width: 50%;
+    margin: 2px 10px;
+}
+.Edit-info {
+    width: 70%;
+    height: 100px;
+    /* border: 1px solid green; */
+}
+.Edit-info >p {
+    font-size: 10px;
+    color: white;
+}
+.Edit-le-top-se {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Edit-le-top-se >button {
+    background-color: white;
+    outline: none;
+    border: none;
+}
+.Edit-le-bot {
+    width: 92%;
+    height: 330px;
+    /* border: 1px solid red; */
+}
+.Edit-le-bot >div {
+    border-bottom: 1px solid rgb(172, 169, 169);
+}
+.Edit-le-bot >div >p {
+    font-size: 11px;
+}
+
+.Edit-right {
+    width: 70%;
+    height: 350px;
+    /* border: 1px solid yellow; */
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Edit-ri-fi {
+    width: 95%;
+    height: 50px;
+    /* border: 1px solid red; */
+}
+.Edit-ri-se {
+    width: 95%;
+    height: 120px;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+}
+.Edit-ri-se >div {
+    width: 30%;
+    height: 20px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Edit-ri-se >div >p {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(80, 76, 76);
+}
+.Edit-ri-se >div >span {
+    font-size: 10px;
+    color: gray;
+}
+.Edit-ri-th {
+    width: 95%;
+    height: 50px;
+    /* border: 1px solid red; */
+}
+.Edit-ri-th >button {
+    width: 20%;
+    height: 30px;
+    background-color: rgb(255,51,95);
+    color: white;
+    cursor: pointer;
+}
