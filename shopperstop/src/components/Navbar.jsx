@@ -22,8 +22,8 @@ const Navbar = () => {
                 <input type='text' placeholder='Search Products & Brands'/>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <i class="fa-regular fa-heart"></i>
-            <i class="fa-solid fa-bag-shopping"></i>
+            <i class="fa-regular fa-heart" onClick={() => router ('/profile')}></i>
+            <i class="fa-solid fa-bag-shopping" onClick={ ()=> router('/cart')}></i>
             <i class="fa-regular fa-circle-user" onClick={ ()=> router('/register')}></i>
         </div>
         

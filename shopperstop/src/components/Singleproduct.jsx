@@ -8,7 +8,7 @@ const Singleproduct = () => {
     const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
     const [currentUserEmail, setCurrentUserEmail] = useState("");
     const [products, setProducts] = useState([]);
-    const [singleproduct, setSingleProduct] = useState([]);
+    const [singleProduct, setSingleProduct] = useState([]);
     const { id } = useParams();
     const router = useNavigate();
 
@@ -29,7 +29,7 @@ const Singleproduct = () => {
 
     useEffect (() => {
         var user = JSON.parse(localStorage.getItem("Current-user"));
-        console.log(user, "usr")
+        // console.log(user, "usr")
         if (user) {
             setIsUserLoggedIn(true);
             setCurrentUserEmail(user.email)
@@ -39,19 +39,20 @@ const Singleproduct = () => {
     
     function addCart() {
         if (isUserLoggedIn) {
-            const users = JSON.parse(localStorage.getItem("Users"));
-            
-            for (var i = 0; i < users.length; i++) {
+            const users = JSON.parse(localStorage.getItem("Users"))
+
+            // console.log(users)
+            for ( var i = 0; i < users.length; i++) {
                 if(users[i].email == currentUserEmail) {
-                    users[i].cart.push(singleproduct);
-                    localStorage.setItem("Users", JSON.stringify(users));
-                    break;
+                    users[i].cart.push(singleProduct)
+                    console.log(singleProduct)
+                    localStorage.setItem("Users", JSON.stringify(users))
                 }
             }
-            alert("Product added successfully to cart!")
+            alert("Product added")
             router('/multi-product')
         } else {
-            alert("You cant add product before login...")
+            alert("You cant add product")
         }
     }
 
@@ -80,12 +81,12 @@ const Singleproduct = () => {
             </div>
             <div className='Sproduct'>
                 <div className='Spro-left'>
-                    <img src={singleproduct.image} />
-                    <img src={singleproduct.image} />
+                    <img src={singleProduct.image} />
+                    <img src={singleProduct.image} />
                 </div>
                 <div className='Spro-right'>
-                    <h4>{singleproduct.title}</h4>
-                    <h5>{singleproduct.price} $</h5>
+                    <h4>{singleProduct.title}</h4>
+                    <h5>{singleProduct.price} $</h5>
                     <p> <span> 419 </span> People Have Viewed This Product Recently!</p>
                     <div className='Size'>
                         <div className='Size-text'>
