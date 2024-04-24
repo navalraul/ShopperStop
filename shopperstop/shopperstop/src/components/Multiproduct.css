@@ -1,0 +1,121 @@
+
+#Mmain {
+    width: 100%;
+    height: 2000px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Mhead {
+    width: 60%;
+    height: 80px;
+    /* border: 1px solid black; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.Mhead-title >h2{
+    font-size: 25px;
+}
+.Mhead-title >h2 >span {
+    font-size: 12px;
+    color: gray;
+}
+.Mhead-sort {
+    width: 30%;
+    height: 20px;
+    border: 1px solid rgb(126, 126, 126);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Mhead-sort >p {
+    font-size: 10px;
+}
+.Mhead-sort >select {
+    width: 80%;
+    outline: none;
+    border: none;
+    font-size: 10px;
+}
+.Mhead-sort >select >option {
+    font-size: 10px;
+}
+.Mbot {
+    width: 90%;
+    height: 1500px;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.Filter {
+    width: 25%;
+    height: 1000px;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Fil-cat {
+    width: 90%;
+    height: 200px;
+    /* border-bottom: 1px solid black; */
+    overflow-y: scroll;
+    border-top: 1px solid black;
+}
+.Fil-cat >p {
+    font-size: 10px;
+}
+.Fil-cat >form >input {
+    margin: 5px;
+}
+.Fil-cat >form >label {
+    font-size: 10px;
+    margin-left: 10px;
+}
+.Filter >button {
+    margin-top: 20px;
+    width: 65%;
+    height: 25px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.Products {
+    width: 73%;
+    height: 1500px;
+    /* border: 1px solid yellow; */
+}
+.Products-all {
+    width: 100%;
+    height: 1700px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Products-all-1 {
+    width: 23%;
+    height: 300px;
+    border: 1px solid rgb(188, 188, 188);
+    box-shadow: 2px 2px 10px 2px rgb(200, 200, 200);
+    cursor: pointer;
+}
+.Products-all-1 >img {
+    width: 95%;
+    height: 180px;
+    margin: 5px;
+}
+.Products-all-1 >h4 {
+    font-size: 12px;
+    color: grey;
+    margin: 10px;
+}
+.Products-all-1 >h5 {
+    font-size: 12px;
+    margin: 10px;
+    /* color: gray; */
+}
